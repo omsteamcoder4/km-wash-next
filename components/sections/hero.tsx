@@ -21,7 +21,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Expert refrigerator repair services with same-day solutions. We handle all cooling issues with professional diagnosis and quality parts.",
       usps: ["Gas Refill", "Compressor Repair", "Warranty Included"],
-      image: "/caro2.png",
+      image: "/fridgess.png",
       stats: "1800+ Repairs Done"
     },
     {
@@ -30,9 +30,26 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Complete AC solutions including installation, servicing, and repairs for all types of air conditioners with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "caro3.png",
+      image: "acac.png",
       stats: "3200+ Installations"
-    }
+    },
+    {
+      title: "Televisions TV",
+      subtitle: "Installation & Service",
+      location: "in Pondicherry",
+      description: "Complete TV including installation, servicing, and repairs for all types of TVs with guaranteed satisfaction.",
+      usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
+      image: "tv.png",
+      stats: "3000+ Installations"
+    },{
+      title: "Microwave Oven",
+      subtitle: "Installation & Service",
+      location: "in Pondicherry",
+      description: "Complete Microwave Oven solutions including installation, servicing, and repairs for all types of Microwave Ovens with guaranteed satisfaction.",
+      usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
+      image: "owen.png",
+      stats: "3200+ Installations"
+    },
   ]
 
   // Auto-rotate slides every 5 seconds
@@ -189,7 +206,7 @@ const Carousel = () => {
                 <img
                   src={slides[currentSlide].image}
                   alt={`Professional ${slides[currentSlide].title.toLowerCase()} technician`}
-                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  className="w-full h-125 rounded-2xl shadow-2xl"
                 />
                 {/* Floating Badge */}
                 <motion.div

@@ -10,7 +10,7 @@ export default function ServicesPage() {
 
       <PageHeader
         title="Our Services"
-        subtitle="Comprehensive washing machine repair and maintenance services for all major brands in Pondicherry"
+        subtitle="Comprehensive repair and maintenance services for all major brands in Pondicherry"
         backgroundImage="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
       />
 
@@ -131,7 +131,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark mb-4">Brands We Service</h2>
             <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              We are authorized service providers for all major washing machine brands with certified technicians and
+              We are authorized service providers for all major brands with certified technicians and
               genuine spare parts.
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark mb-4">Our Service Process</h2>
             <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              Simple and transparent process to get your washing machine repaired quickly and efficiently.
+              Simple and transparent process to get your appliances repaired quickly and efficiently.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ export default function ServicesPage() {
               {
                 step: "01",
                 title: "Book Service",
-                description: "Call us or WhatsApp to book your washing machine repair service",
+                description: "Call us or WhatsApp to book your repair service",
                 icon: "📞",
               },
               {
@@ -199,7 +199,7 @@ export default function ServicesPage() {
               {
                 step: "04",
                 title: "Testing",
-                description: "Thorough testing to ensure your washing machine works perfectly",
+                description: "Thorough testing to ensure your appliances works perfectly",
                 icon: "✅",
               },
             ].map((process, index) => (
@@ -232,7 +232,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">Service Coverage</h2>
             <p className="font-inter text-lg text-white/90 max-w-2xl mx-auto">
-              We provide doorstep washing machine repair service across all areas of Pondicherry with same-day service
+              We provide doorstep repair service across all areas of Pondicherry with same-day service
               guarantee.
             </p>
           </div>
@@ -292,10 +292,10 @@ export default function ServicesPage() {
       <section className="py-20 bg-primary-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">
-            Need Washing Machine Repair Service?
+            Need Repair Service?
           </h2>
           <p className="font-inter text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact KM Enterprises today for professional, reliable, and affordable washing machine repair service in
+            Contact KM Enterprises today for professional, reliable, and affordable repair service in
             Pondicherry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -309,7 +309,7 @@ export default function ServicesPage() {
               <span>Call +91 9566383338</span>
             </a>
             <a
-              href="https://wa.me/919566383338?text=Hi! I need washing machine repair service."
+              href="https://wa.me/919566383338?text=Hi! I need repair service."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-2 font-poppins font-semibold text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-blue rounded-xl transition-all duration-300 hover:scale-105"
@@ -321,7 +321,33 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
+
       </section>
+      <div className="relative">
+
+        <svg
+          className="absolute top-0 left-0 w-full h-10 sm:h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100"
+          shapeRendering="crispEdges" // ← Prevents anti-aliasing artifacts
+        >
+          {/* White shape - matches your clip-path percentages */}
+          <polygon
+            points="30,0 69,0 63,100 37,100"
+            vectorEffect="non-scaling-stroke" // ← Optional for sharp edges
+            className="fill-blue-400"
+
+          />
+
+          {/* Dark shape - intentionally slightly overlaps (0.1 unit) */}
+          <polygon
+            points="0,100 34,100 25,0 0,0" // ← 35.1 overlaps with white's 16
+            fill="white"
+          />
+
+        </svg>
+      </div>
 
       <Footer />
       <FloatingButtons />

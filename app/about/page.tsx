@@ -1,17 +1,34 @@
+'use client'
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import FloatingButtons from "@/components/common/FloatingButtons"
 import PageHeader from "@/components/common/PageHeader"
 import { User } from 'lucide-react'
+import { useState, useEffect } from "react"
+
+
 
 export default function AboutPage() {
+
+  const [isScrolled, setIsScrolled] = useState(false)
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 60)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+
   return (
     <div className="min-h-screen">
       <Header />
 
       <PageHeader
         title="About KM Enterprises"
-        subtitle="20+ years of excellence in washing machine repair service across Pondicherry"
+        subtitle="20+ years of excellence in repair service across Pondicherry"
         backgroundImage="/user1.png"
       />
 
@@ -21,11 +38,11 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark">
-                Your Trusted Washing Machine Repair Partner
+                Your Trusted Repair Service Partner
               </h2>
               <div className="space-y-4">
                 <p className="font-inter text-lg text-steel-gray leading-relaxed">
-                  Founded in 2004, KM Enterprises has been the leading washing machine repair service provider in
+                  Founded in 2004, KM Enterprises has been the leading repair service provider in
                   Pondicherry for over two decades. What started as a small repair shop has grown into the most trusted
                   name for appliance repair in the region.
                 </p>
@@ -35,9 +52,9 @@ export default function AboutPage() {
                   doorstep service with same-day repair guarantee.
                 </p>
                 <p className="font-inter text-lg text-steel-gray leading-relaxed">
-                  With certified technicians and state-of-the-art diagnostic tools, we ensure your washing machine gets
+                  With certified technicians and state-of-the-art diagnostic tools, we ensure your services gets
                   the best care possible. Our transparent pricing and warranty on all repairs make us the preferred
-                  choice for washing machine service in Pondicherry.
+                  choice for service in Pondicherry.
                 </p>
               </div>
             </div>
@@ -74,7 +91,7 @@ export default function AboutPage() {
               {
                 title: "Expert Technicians",
                 description:
-                  "Our certified technicians are trained by major brands and have extensive experience in washing machine repair.",
+                  "Our certified technicians are trained by major brands and have extensive experience in repair.",
                 icon: "👨‍🔧",
                 image:
                   "/technicians.png",
@@ -90,7 +107,7 @@ export default function AboutPage() {
               {
                 title: "Same Day Service",
                 description:
-                  "Most repairs are completed the same day. We understand the importance of your washing machine in daily life.",
+                  "Most repairs are completed the same day. We understand the importance of your Home Appliances in daily life.",
                 icon: "⚡",
                 image:
                   "/sameday.png",
@@ -242,10 +259,10 @@ export default function AboutPage() {
       <section className="py-20 bg-primary-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-4">
-            Ready to Get Your Washing Machine Fixed?
+            Ready to Get Your Appliances Fixed?
           </h2>
           <p className="font-inter text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for professional washing machine repair service in Pondicherry. Same-day service available!
+            Contact us today for professional repair service in Pondicherry. Same-day service available!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -258,7 +275,7 @@ export default function AboutPage() {
               <span>Call +91 9566383338</span>
             </a>
             <a
-              href="https://wa.me/919566383338?text=Hi! I need washing machine repair service."
+              href="https://wa.me/919566383338?text=Hi! I need repair service."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-2 font-poppins font-semibold text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-blue rounded-xl transition-all duration-300 hover:scale-105"
@@ -270,8 +287,34 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
-      </section>
+        <div className={`${isScrolled ? "w-[80%] bg-green-300" : "w-[100%] bg-red-400"} transition`}></div>
 
+      </section>
+      <div className="relative">
+
+        <svg
+          className="absolute top-0 left-0 w-full h-10 sm:h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100"
+          shapeRendering="crispEdges" // ← Prevents anti-aliasing artifacts
+        >
+          {/* White shape - matches your clip-path percentages */}
+          <polygon
+            points="30,0 69,0 63,100 37,100"
+            vectorEffect="non-scaling-stroke" // ← Optional for sharp edges
+            className="fill-blue-400"
+
+          />
+
+          {/* Dark shape - intentionally slightly overlaps (0.1 unit) */}
+          <polygon
+            points="0,100 34,100 25,0 0,0" // ← 35.1 overlaps with white's 16
+            fill="white"
+          />
+
+        </svg>
+      </div>
       <Footer />
       <FloatingButtons />
     </div>

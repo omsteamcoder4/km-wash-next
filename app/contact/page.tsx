@@ -33,7 +33,7 @@ export default function ContactPage() {
     e.preventDefault()
 
     // Format the message for WhatsApp
-    const message = `Hi! I need washing machine repair service.
+    const message = `Hi! I need repair service.
 
 *Customer Details:*
 Name: ${formData.name}
@@ -76,7 +76,7 @@ Please contact me to schedule the service. Thank you!`
 
       <PageHeader
         title="Contact Us"
-        subtitle="Get in touch for professional washing machine repair service in Pondicherry"
+        subtitle="Get in touch for professional repair service in Pondicherry"
         backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
       />
 
@@ -88,7 +88,7 @@ Please contact me to schedule the service. Thank you!`
             <div className="bg-soft-white p-8 rounded-2xl shadow-lg">
               <h2 className="font-poppins font-bold text-2xl md:text-3xl text-primary-dark mb-6">Book Your Service</h2>
               <p className="font-inter text-steel-gray mb-8">
-                Fill out the form below and we'll contact you within 30 minutes to schedule your washing machine repair
+                Fill out the form below and we'll contact you within 30 minutes to schedule your appliances repair
                 service.
               </p>
 
@@ -160,7 +160,7 @@ Please contact me to schedule the service. Thank you!`
 
                 {/* Washing Machine Details */}
                 <div className="border-t border-gray-200 pt-6">
-                  <h3 className="font-poppins font-semibold text-lg text-primary-dark mb-4">Washing Machine Details</h3>
+                  <h3 className="font-poppins font-semibold text-lg text-primary-dark mb-4">Details</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="brand" className="block font-poppins font-medium text-primary-dark mb-2">
@@ -237,7 +237,7 @@ Please contact me to schedule the service. Thank you!`
                     required
                     rows={4}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-blue focus:outline-none font-inter transition-colors duration-300 resize-none"
-                    placeholder="Please describe the problem with your washing machine in detail"
+                    placeholder="Please describe the problem with your appliance in detail"
                   ></textarea>
                 </div>
 
@@ -327,10 +327,10 @@ Please contact me to schedule the service. Thank you!`
                     <div>
                       <h4 className="font-poppins font-semibold text-lg mb-1">Email</h4>
                       <a
-                        href="mailto:user@gmail.com"
+                        href="mailto:kmenterprises.online@gmail.com"
                         className="font-inter text-white/90 hover:text-accent-yellow transition-colors"
                       >
-                        user@gmail.com
+                        kmenterprises.online@gmail.com
                       </a>
                       <p className="font-inter text-sm text-white/70 mt-1">We'll respond within 24 hours</p>
                     </div>
@@ -399,7 +399,7 @@ Please contact me to schedule the service. Thank you!`
                   <div className="font-inter text-sm opacity-90">Instant Support</div>
                 </a>
                 <a
-                  href="https://wa.me/919566383338?text=Hi! I need washing machine repair service."
+                  href="https://wa.me/919566383338?text=Hi! I need repair service."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white p-6 rounded-xl text-center transition-all duration-300 hover:scale-105"
@@ -424,7 +424,7 @@ Please contact me to schedule the service. Thank you!`
               We Serve All Areas of Pondicherry
             </h2>
             <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              Professional doorstep washing machine repair service available across all localities in Pondicherry with
+              Professional doorstep repair service available across all localities in Pondicherry with
               same-day service guarantee.
             </p>
           </div>
@@ -522,14 +522,14 @@ Please contact me to schedule the service. Thank you!`
               Frequently Asked Questions
             </h2>
             <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              Common questions about our washing machine repair service in Pondicherry.
+              Common questions about our repair service in Pondicherry.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             {[
               {
-                question: "How quickly can you repair my washing machine?",
+                question: "How quickly can you repair my appliances?",
                 answer:
                   "Most repairs are completed the same day. Our technicians carry common spare parts and can diagnose and fix most issues within 2-4 hours of arrival.",
               },
@@ -551,7 +551,7 @@ Please contact me to schedule the service. Thank you!`
               {
                 question: "Do you provide doorstep service?",
                 answer:
-                  "Yes, we provide doorstep service across all areas of Pondicherry. No need to transport your heavy washing machine - we come to you.",
+                  "Yes, we provide doorstep service across all areas of Pondicherry. No need to transport your heavy appliances - we come to you.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-soft-white p-6 rounded-xl shadow-lg">

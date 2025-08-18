@@ -43,7 +43,12 @@ const Header = () => {
     { name: "Contact", href: "/contact" },
   ]
 
-  const isActive = (href: string) => pathname === href
+  const isActive = (href: string) => {
+    const cur = (pathname || "/").replace(/\/+$/, "") || "/";
+    const tgt = href.replace(/\/+$/, "") || "/";
+    if (tgt === "/") return cur === "/";
+    return cur === tgt || cur.startsWith(`${tgt}/`);
+  };
 
   const handleNavigation = (href: string) => {
     setIsMobileMenuOpen(false)
@@ -127,7 +132,7 @@ const Header = () => {
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
                 className={`font-poppins font-medium text-sm tracking-wide transition-all duration-300 px-3 py-2 rounded-lg cursor-pointer ${isActive(item.href)
-                  ? "bg-primary-blue text-white"
+                  ? "bg-blue-400 text-white"
                   : isScrolled
                     ? "text-primary-dark hover:text-primary-blue hover:bg-primary-blue/10"
                     : "text-white hover:text-accent-yellow"
@@ -151,7 +156,8 @@ const Header = () => {
             </a>
             <button
               onClick={() => handleNavigation("/contact")}
-              className="font-poppins font-semibold text-sm px-6 py-2 bg-primary-blue text-white rounded-lg hover:bg-primary-blue/90 transition-all duration-300 btn-glow cursor-pointer"
+              className={`font-poppins font-semibold text-sm px-6 py-2 bg-primary-blue rounded-lg hover:bg-primary-blue/90 transition-all duration-300 btn-glow cursor-pointer ${isScrolled ? "text-black" : "text-white"
+                }`}
             >
               Book Service
             </button>
@@ -183,7 +189,7 @@ const Header = () => {
                   key={item.name}
                   onClick={() => handleNavigation(item.href)}
                   className={`font-poppins font-medium text-sm px-3 py-2 rounded-lg transition-colors text-left cursor-pointer ${isActive(item.href)
-                    ? "bg-primary-blue text-white"
+                    ? "bg-blue-400 text-white"
                     : "text-primary-dark hover:bg-primary-blue/10 hover:text-primary-blue"
                     }`}
                 >

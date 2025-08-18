@@ -5,6 +5,7 @@ import FloatingButtons from "@/components/common/FloatingButtons"
 import { useEffect, useState } from "react";
 import Carousel from '@/components/sections/hero'
 import Testimonials from "@/components/sections/testimonials";
+import Timeline from "@/components/sections/timeline";
 
 
 export default function HomePage() {
@@ -52,16 +53,16 @@ export default function HomePage() {
             {/* Right Content */}
             <div className="space-y-6">
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark">
-                Professional Washing Machine Repair Service in Pondicherry
+                Professional Service Center in Pondicherry
               </h2>
               <div className="space-y-4">
                 <p className="font-inter text-lg text-steel-gray leading-relaxed">
-                  With over 20 years of experience, KM Enterprises is your trusted partner for washing machine repair
+                  With over 20 years of experience, KM Enterprises is your trusted partner for your home appliances repair
                   and maintenance in Pondicherry. We specialize in all major brands and provide doorstep service with
                   genuine spare parts.
                 </p>
                 <p className="font-inter text-lg text-steel-gray leading-relaxed">
-                  Our certified technicians are trained to handle all types of washing machine issues, from simple
+                  Our certified technicians are trained to handle all types of home appliances issues, from simple
                   repairs to complex technical problems. We ensure quality service with warranty on all repairs.
                 </p>
               </div>
@@ -123,6 +124,34 @@ export default function HomePage() {
                   "/top.png",
               },
               {
+                title: "Refrigirator",
+                description: "Convenient doorstep repair service at your home in Pondicherry",
+                icon: "🏠",
+                image:
+                  "/fridges.png",
+              },
+              {
+                title: "TV",
+                description: "Convenient doorstep repair service at your home in Pondicherry",
+                icon: "🏠",
+                image:
+                  "/tvs.png",
+              },
+              {
+                title: "Air Conditioner",
+                description: "Convenient doorstep repair service at your home in Pondicherry",
+                icon: "🏠",
+                image:
+                  "/acs.png",
+              },
+              {
+                title: "Microwave oven",
+                description: "Convenient doorstep repair service at your home in Pondicherry",
+                icon: "🏠",
+                image:
+                  "/owens.png",
+              },
+              {
                 title: "Fully Automatic Service",
                 description: "Complete repair and maintenance for fully automatic washing machines",
                 icon: "🔩",
@@ -150,6 +179,7 @@ export default function HomePage() {
                 image:
                   "/doorstep.png",
               },
+
             ].map((service, index) => (
               <div
                 key={service.title}
@@ -249,7 +279,7 @@ export default function HomePage() {
               </div>
 
               {/* Availability Check */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-primary-blue/20">
+              {/* <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-primary-blue/20">
                 <h4 className="font-poppins font-semibold text-lg text-primary-dark mb-4">
                   Check Service Availability
                 </h4>
@@ -267,93 +297,44 @@ export default function HomePage() {
                   <div className="w-3 h-3 bg-accent-yellow rounded-full animate-pulse"></div>
                   <span className="font-inter text-sm text-steel-gray">Same-day service available</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
-<Testimonials />
+
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark mb-4">Our Journey</h2>
-            <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              Two decades of excellence in washing machine repair service across Pondicherry.
-            </p>
-          </div>
 
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-blue/20 hidden lg:block"></div>
-
-            <div className="space-y-12">
-              {[
-                {
-                  year: "2004",
-                  title: "Founded KM Enterprises",
-                  description:
-                    "Started with a vision to provide reliable washing machine repair service in Pondicherry",
-                  icon: "🏢",
-                  side: "left",
-                },
-                {
-                  year: "2010",
-                  title: "10K+ Repairs Completed",
-                  description: "Achieved milestone of serving over 10,000 satisfied customers across Pondicherry",
-                  icon: "🔧",
-                  side: "right",
-                },
-                {
-                  year: "2015",
-                  title: "Brand-Trained Technicians",
-                  description: "Our team became certified technicians for all major washing machine brands",
-                  icon: "👨‍🔧",
-                  side: "left",
-                },
-                {
-                  year: "2024",
-                  title: "5⭐ Reviews & Growing",
-                  description: "Consistently rated 5 stars by customers with over 2800+ successful repairs",
-                  icon: "⭐",
-                  side: "right",
-                },
-              ].map((milestone, index) => (
-                <div key={milestone.year} className="relative">
-                  <div className={`lg:flex items-center ${milestone.side === "right" ? "lg:flex-row-reverse" : ""}`}>
-                    {/* Content */}
-                    <div className="lg:w-1/2 lg:px-8">
-                      <div
-                        className={`bg-soft-white p-6 rounded-xl shadow-lg ${milestone.side === "right" ? "lg:text-right" : ""}`}
-                      >
-                        <div className="flex items-center space-x-3 mb-3">
-                          <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center text-2xl">
-                            {milestone.icon}
-                          </div>
-                          <div>
-                            <div className="font-poppins font-bold text-xl text-primary-blue">{milestone.year}</div>
-                            <h3 className="font-poppins font-semibold text-lg text-primary-dark">{milestone.title}</h3>
-                          </div>
-                        </div>
-                        <p className="font-inter text-steel-gray leading-relaxed">{milestone.description}</p>
-                      </div>
-                    </div>
-
-                    {/* Timeline Dot */}
-                    <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-blue rounded-full border-4 border-white shadow-lg"></div>
-
-                    {/* Spacer */}
-                    <div className="lg:w-1/2"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Timeline />
       {/* Testimonials Section */}
-      
+      <Testimonials />
+      <div className="relative">
+
+        <svg
+          className="absolute top-0 left-0 w-full h-10 sm:h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100"
+          shapeRendering="crispEdges" // ← Prevents anti-aliasing artifacts
+        >
+          {/* White shape - matches your clip-path percentages */}
+          <polygon
+            points="30,0 69,0 63,100 37,100"
+            vectorEffect="non-scaling-stroke" // ← Optional for sharp edges
+            className="fill-deep-teal"
+
+          />
+
+          {/* Dark shape - intentionally slightly overlaps (0.1 unit) */}
+          <polygon
+            points="0,100 34,100 25,0 0,0" // ← 35.1 overlaps with white's 16
+            fill="white"
+          />
+
+        </svg>
+
+
+      </div>
       <Footer />
       <FloatingButtons />
     </div>

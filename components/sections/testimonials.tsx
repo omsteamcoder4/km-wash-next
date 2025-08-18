@@ -30,7 +30,6 @@ const Testimonials = () => {
         }
     ]
 
-    // Auto-rotate testimonials every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
@@ -39,123 +38,156 @@ const Testimonials = () => {
     }, [testimonials.length])
 
     return (
-        <section className="py-20 bg-gradient-to-br from-primary-dark to-deep-teal">
-            <div className="container mx-auto px-4">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left - Testimonial Card */}
-                    <AnimatePresence mode='wait'>
-                        <motion.div
-                            key={`testimonial-${currentTestimonial}`}
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 50 }}
-                            transition={{ duration: 0.5 }}
-                            className="relative"
-                        >
-                            <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl">
-                                {/* Quote Icon */}
-                                <motion.div
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ duration: 0.4, delay: 0.2 }}
-                                    className="w-16 h-16 bg-primary-blue rounded-full flex items-center justify-center mb-6"
-                                >
-                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
-                                    </svg>
-                                </motion.div>
-
-                                {/* Review */}
-                                <motion.blockquote
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.4, delay: 0.3 }}
-                                    className="font-poppins font-semibold text-xl text-primary-dark mb-6 italic leading-relaxed"
-                                >
-                                    "{testimonials[currentTestimonial].review}"
-                                </motion.blockquote>
-
-                                {/* Stars */}
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.4, delay: 0.4 }}
-                                    className="flex text-accent-yellow mb-4"
-                                >
-                                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                                        <svg key={i} className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    ))}
-                                </motion.div>
-
-                                {/* Customer Info */}
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.4, delay: 0.5 }}
-                                >
-                                    <div className="font-poppins font-bold text-lg text-primary-blue">
-                                        {testimonials[currentTestimonial].name}
-                                    </div>
-                                    <div className="font-inter text-sm text-steel-gray">
-                                        {testimonials[currentTestimonial].location}
-                                    </div>
-                                </motion.div>
-                            </div>
-
-                            {/* Background decoration */}
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ duration: 0.4, delay: 0.6 }}
-                                className="absolute -top-4 -right-4 w-24 h-24 bg-accent-yellow/20 rounded-full blur-2xl"
-                            ></motion.div>
-                        </motion.div>
-                    </AnimatePresence>
-
-                    {/* Right - Image */}
-                    <AnimatePresence mode='wait'>
-                        <motion.div
-                            key={`image-${currentTestimonial}`}
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -50 }}
-                            transition={{ duration: 0.5 }}
-                            className="relative rounded-2xl overflow-hidden h-[420px] md:h-[520px] lg:h-[560px]"
-                        >
-
-                            <img
-                                src={testimonials[currentTestimonial].image}
-                                alt={`Happy customer ${testimonials[currentTestimonial].name}`}
-                                className="w-full h-full object-cover"
-                                loading="lazy"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/20 to-transparent rounded-2xl"></div>
-                        </motion.div>
-                    </AnimatePresence>
-                </div>
-
-                {/* Carousel Controls */}
-                <div className="flex justify-center mt-12 space-x-3">
-                    {testimonials.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentTestimonial(index)}
-                            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentTestimonial === index ? 'bg-accent-yellow w-8' : 'bg-white/30'}`}
-                            aria-label={`View testimonial from ${testimonials[index].name}`}
-                        />
-                    ))}
-                </div>
-
-                {/* Additional Reviews (Static) */}
-                <motion.div
+        <section className="py-20 bg-gradient-to-br from-primary-dark to-deep-teal relative overflow-hidden">
+            {/* Floating decorative elements */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-accent-yellow/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary-blue/10 rounded-full blur-3xl"></div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+                <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl font-bold text-white mb-4">Customer Experiences</h2>
+                    <p className="text-white/80 max-w-2xl mx-auto">Hear what our satisfied customers have to say about our service</p>
+                </motion.div>
+
+                {/* 3D Stacked Carousel */}
+                <div className="relative h-[500px]">
+                    {testimonials.map((testimonial, index) => {
+                        const position = (index - currentTestimonial + testimonials.length) % testimonials.length
+                        const isActive = position === 0
+                        const isNext = position === 1
+                        const isPrev = position === testimonials.length - 1
+
+                        return (
+                            <motion.div
+                                key={index}
+                                className={`absolute inset-0 max-w-3xl mx-auto ${isActive ? 'z-10' : isNext ? 'z-0' : 'z-0'}`}
+                                initial={false}
+                                animate={{
+                                    x: isActive ? 0 : isNext ? '40%' : '-40%',
+                                    y: isActive ? 0 : 40,
+                                    scale: isActive ? 1 : 0.9,
+                                    opacity: isActive ? 1 : isNext || isPrev ? 0.7 : 0.4,
+                                    rotateY: isActive ? 0 : isNext ? -15 : 15
+                                }}
+                                transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+                            >
+                                <div className={`bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden h-full transition-all duration-300 ${isActive ? 'border-2 border-accent-yellow' : 'border border-white/20'}`}>
+                                    <div className="flex flex-col md:flex-row h-full">
+                                        {/* Image with decorative frame */}
+                                        <div className="md:w-2/5 relative">
+                                            <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 to-transparent"></div>
+                                            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-4 border-accent-yellow rounded-lg opacity-30"></div>
+                                            <div className="absolute -top-4 -right-4 w-16 h-16 border-4 border-primary-blue rounded-lg opacity-30"></div>
+                                            <img
+                                                src={testimonial.image}
+                                                alt={testimonial.name}
+                                                className="w-full h-full object-cover"
+                                                loading="lazy"
+                                            />
+                                        </div>
+
+                                        {/* Content with animated elements */}
+                                        <div className="md:w-3/5 p-8 flex flex-col justify-center relative">
+                                            {/* Floating quote icon */}
+                                            <motion.div
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                transition={{ delay: isActive ? 0.3 : 0 }}
+                                                className="absolute top-8 right-8 text-primary-blue/10"
+                                            >
+                                                <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                                                </svg>
+                                            </motion.div>
+
+                                            {/* Rating stars with pop-in animation */}
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: isActive ? 1 : 0.5, y: isActive ? 0 : 20 }}
+                                                transition={{ delay: isActive ? 0.4 : 0 }}
+                                                className="flex text-accent-yellow mb-4"
+                                            >
+                                                {[...Array(testimonial.rating)].map((_, i) => (
+                                                    <svg key={i} className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                    </svg>
+                                                ))}
+                                            </motion.div>
+
+                                            {/* Review text with typewriter effect */}
+                                            <motion.blockquote
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: isActive ? 1 : 0.5 }}
+                                                transition={{ delay: isActive ? 0.5 : 0 }}
+                                                className="text-primary-dark text-lg italic mb-6 leading-relaxed"
+                                            >
+                                                "{testimonial.review}"
+                                            </motion.blockquote>
+
+                                            {/* Customer info with slide-in effect */}
+                                            <motion.div
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: isActive ? 1 : 0.5, x: isActive ? 0 : -20 }}
+                                                transition={{ delay: isActive ? 0.6 : 0 }}
+                                                className="mt-auto"
+                                            >
+                                                <h4 className="text-xl font-bold text-primary-blue">{testimonial.name}</h4>
+                                                <p className="text-steel-gray">{testimonial.location}</p>
+                                            </motion.div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )
+                    })}
+                </div>
+
+                {/* Navigation Controls */}
+                <div className="flex justify-center mt-12 space-x-4">
+                    <button 
+                        onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                        className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group"
+                        aria-label="Previous testimonial"
+                    >
+                        <svg className="w-6 h-6 text-white group-hover:text-accent-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <div className="flex items-center space-x-2">
+                        {testimonials.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentTestimonial(index)}
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${currentTestimonial === index ? 'bg-accent-yellow w-6' : 'bg-white/30'}`}
+                                aria-label={`View testimonial from ${testimonials[index].name}`}
+                            />
+                        ))}
+                    </div>
+
+                    <button 
+                        onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
+                        className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group"
+                        aria-label="Next testimonial"
+                    >
+                        <svg className="w-6 h-6 text-white group-hover:text-accent-yellow transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Additional Reviews - Floating Cards */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="mt-16 grid md:grid-cols-3 gap-8"
+                    className="mt-24 grid md:grid-cols-3 gap-6"
                 >
                     {[
                         {
@@ -179,23 +211,24 @@ const Testimonials = () => {
                     ].map((review, index) => (
                         <motion.div
                             key={review.name}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ y: 50, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-white hover:bg-white/20 transition-colors duration-300"
+                            className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-accent-yellow/30 transition-all duration-300 hover:-translate-y-2"
+                            whileHover={{ scale: 1.02 }}
                         >
-                            <div className="flex text-accent-yellow mb-3">
+                            <div className="flex text-accent-yellow mb-4">
                                 {[...Array(review.rating)].map((_, i) => (
-                                    <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                     </svg>
                                 ))}
                             </div>
-                            <p className="font-inter text-sm text-white/90 mb-4 leading-relaxed">"{review.review}"</p>
+                            <blockquote className="text-white/90 mb-6 leading-relaxed">"{review.review}"</blockquote>
                             <div>
-                                <div className="font-poppins font-semibold text-sm">{review.name}</div>
-                                <div className="font-inter text-xs text-white/70">{review.location}</div>
+                                <div className="font-semibold text-white">{review.name}</div>
+                                <div className="text-sm text-white/70">{review.location}</div>
                             </div>
                         </motion.div>
                     ))}

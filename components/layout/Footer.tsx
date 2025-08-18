@@ -37,21 +37,35 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-primary-dark text-white relative overflow-hidden mt-30">
-      <div
-        className="absolute top-0 left-0 w-full h-10 sm:h-16 bg-white z-0
-             [clip-path:polygon(8%_0,100%_0,100%_100%,16%_100%)]
-             sm:[clip-path:polygon(15%_0,100%_0,100%_100%,20%_100%)]"
-      />
-
-      <div
-        className="absolute top-0 left-0 w-full h-10 sm:h-16 bg-primary-dark z-10
-             [clip-path:polygon(0_100%,35%_100%,25%_0,0_0)]
-             sm:[clip-path:polygon(0_100%,30%_100%,25%_0,0_0)]"
-      />
+    <footer className="bg-primary-dark text-white relative overflow-hidden mt-15 lg:25 border-t-0">
 
 
-      <div className="container mx-auto px-4 pt-25 pb-8" data-aos="fade-up">
+      <svg
+        className="absolute top-0 left-0 w-full h-10 sm:h-16"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        viewBox="0 0 100 100"
+        shapeRendering="crispEdges" // ← Prevents anti-aliasing artifacts
+      >
+        {/* White shape - matches your clip-path percentages */}
+        <polygon
+          points="30,0 70,0 65,75 35,75"
+          fill="white"
+          vectorEffect="non-scaling-stroke" // ← Optional for sharp edges
+        />
+
+        {/* Dark shape - intentionally slightly overlaps (0.1 unit) */}
+        <polygon
+          points="0,100 30,100 5,0 0,0"
+          className="fill-primary-dark" />
+
+
+
+      </svg>
+
+
+
+      <div className="container mx-auto px-4 pt-25 pb-8 border-t-0" data-aos="fade-up">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4 group" data-aos="fade-up" data-aos-delay="100">
             <Link href={'/'}>
@@ -169,10 +183,10 @@ const Footer = () => {
                   </svg>
                 </div>
                 <a
-                  href="mailto:user@gmail.com"
+                  href="mailto:kmenterprises.online@gmail.com"
                   className="font-inter text-sm text-gray-300 hover:text-primary-blue transition-all duration-300 relative group"
                 >
-                  <span className="relative z-10">user@gmail.com</span>
+                  <span className="relative z-10">kmenterprises.online@gmail.com</span>
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-blue transition-all duration-300 group-hover:w-full"></div>
                 </a>
               </div>
@@ -191,7 +205,7 @@ const Footer = () => {
                   </svg>
                 </div>
                 <p className="font-inter text-sm text-gray-300 transition-colors duration-300 group-hover:text-gray-200">
-                  Pondicherry, India
+                  No: 57 D NKS Complex First St,<br /> New Saram Opp to Saram Market,<br /> Pondicherry - 605013.
                 </p>
               </div>
             </div>
