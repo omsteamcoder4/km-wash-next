@@ -37,7 +37,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-primary-dark text-white relative overflow-hidden mt-15 lg:25 border-t-0">
+    <footer className="bg-primary-dark text-white relative overflow-hidden mt-16 sm:mt-16 lg:mt-56 border-t-0">
 
 
       <svg

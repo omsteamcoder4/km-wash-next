@@ -292,28 +292,26 @@ export default function AboutPage() {
       </section>
       <div className="relative">
 
-        <svg
+        {/* <svg
           className="absolute top-0 left-0 w-full h-10 sm:h-16"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           viewBox="0 0 100 100"
-          shapeRendering="crispEdges" // ← Prevents anti-aliasing artifacts
+          shapeRendering="crispEdges" 
         >
-          {/* White shape - matches your clip-path percentages */}
           <polygon
             points="30,0 69,0 63,100 37,100"
-            vectorEffect="non-scaling-stroke" // ← Optional for sharp edges
+            vectorEffect="non-scaling-stroke" 
             className="fill-blue-400"
 
           />
 
-          {/* Dark shape - intentionally slightly overlaps (0.1 unit) */}
           <polygon
-            points="0,100 34,100 25,0 0,0" // ← 35.1 overlaps with white's 16
+            points="0,100 34,100 25,0 0,0" 
             fill="white"
           />
 
-        </svg>
+        </svg> */}
       </div>
       <Footer />
       <FloatingButtons />
