@@ -188,7 +188,7 @@ Please contact me to schedule the service. Thank you!`
                         <option value="Other">Other</option>
                       </select>
                     </div>
-                    <div>
+                    {/* <div>
                       <label htmlFor="model" className="block font-poppins font-medium text-primary-dark mb-2">
                         Model Number
                       </label>
@@ -201,11 +201,11 @@ Please contact me to schedule the service. Thank you!`
                         className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-blue focus:outline-none font-inter transition-colors duration-300"
                         placeholder="Enter model number if known"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="serviceType" className="block font-poppins font-medium text-primary-dark mb-2">
                     Service Type *
                   </label>
@@ -223,7 +223,7 @@ Please contact me to schedule the service. Thank you!`
                     <option value="Installation">Installation</option>
                     <option value="Emergency Service">Emergency Service</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="issue" className="block font-poppins font-medium text-primary-dark mb-2">
@@ -241,7 +241,7 @@ Please contact me to schedule the service. Thank you!`
                   ></textarea>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="preferredTime" className="block font-poppins font-medium text-primary-dark mb-2">
                     Preferred Service Time
                   </label>
@@ -258,7 +258,7 @@ Please contact me to schedule the service. Thank you!`
                     <option value="Evening (4 PM - 8 PM)">Evening (4 PM - 8 PM)</option>
                     <option value="Anytime">Anytime</option>
                   </select>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"
@@ -317,7 +317,7 @@ Please contact me to schedule the service. Thank you!`
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
+                  {/* <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -326,15 +326,10 @@ Please contact me to schedule the service. Thank you!`
                     </div>
                     <div>
                       <h4 className="font-poppins font-semibold text-lg mb-1">Email</h4>
-                      <a
-                        href="mailto:kmenterprises.online@gmail.com"
-                        className="font-inter text-white/90 hover:text-accent-yellow transition-colors"
-                      >
-                        kmenterprises.online@gmail.com
-                      </a>
+                      
                       <p className="font-inter text-sm text-white/70 mt-1">We'll respond within 24 hours</p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0">

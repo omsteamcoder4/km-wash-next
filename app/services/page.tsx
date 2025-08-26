@@ -131,7 +131,7 @@ export default function ServicesPage() {
           <div className="text-center mb-16">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-primary-dark mb-4">Brands We Service</h2>
             <p className="font-inter text-lg text-steel-gray max-w-2xl mx-auto">
-              We are authorized service providers for all major brands with certified technicians and
+              We are service providers for all major brands with certified technicians and
               genuine spare parts.
             </p>
           </div>

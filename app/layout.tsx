@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins, Inter } from "next/font/google"
+import Script from "next/script"                 // <-- add this
 import "./globals.css"
 
 const poppins = Poppins({
@@ -23,20 +24,32 @@ export const metadata: Metadata = {
     "Professional washing machine repair and service in Pondicherry. All brands supported - IFB, LG, Samsung, Whirlpool, Bosch, Godrej. Same-day doorstep service.",
   keywords:
     "washing machine repair Pondicherry, washing machine service Pondicherry, appliance repair, doorstep service",
-    generator: 'v0.app',
-    icons:{
-      icon:'/faicon.png'
-    }
+  generator: "v0.app",
+  icons: { icon: "/faicon.png" },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable} antialiased`}>
-      <body className="font-inter">{children}</body>
+      <body className="font-inter">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16672888880"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16672888880');
+          `}
+        </Script>
+
+        {children}
+      </body>
     </html>
   )
 }

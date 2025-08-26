@@ -42,7 +42,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 <p className="font-inter text-lg text-steel-gray leading-relaxed">
-                  Founded in 2004, KM Enterprises has been the leading repair service provider in
+                   KM Enterprises has been the leading repair service provider in
                   Pondicherry for over two decades. What started as a small repair shop has grown into the most trusted
                   name for appliance repair in the region.
                 </p>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               {
                 title: "Genuine Spare Parts",
                 description:
-                  "We use only genuine spare parts from authorized dealers to ensure long-lasting repairs and optimal performance.",
+                  "We use only genuine spare parts from dealers to ensure long-lasting repairs and optimal performance.",
                 icon: "⚙️",
                 image:
                   "/spare.png",
@@ -138,7 +138,7 @@ export default function AboutPage() {
               },
             ].map((feature, index) => (
               <div key={feature.title} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-55 overflow-hidden">
                   <img
                     src={feature.image || "/placeholder.svg"}
                     alt={feature.title}

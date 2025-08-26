@@ -171,7 +171,7 @@ const Footer = () => {
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-blue transition-all duration-300 group-hover:w-full"></div>
                 </a>
               </div>
-              <div className="flex items-center space-x-3 group transition-all duration-300 hover:translate-x-1">
+              {/* <div className="flex items-center space-x-3 group transition-all duration-300 hover:translate-x-1">
                 <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-rotate-12">
                   <svg
                     className="w-5 h-5 text-primary-blue transition-colors duration-300 group-hover:text-accent-yellow"
@@ -189,7 +189,7 @@ const Footer = () => {
                   <span className="relative z-10">kmenterprises.online@gmail.com</span>
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-blue transition-all duration-300 group-hover:w-full"></div>
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-start space-x-3 group transition-all duration-300 hover:translate-x-1">
                 <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:bounce">
                   <svg
@@ -226,10 +226,14 @@ const Footer = () => {
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <p className="font-inter text-xs text-gray-400 text-center md:text-left transition-all duration-300 hover:text-gray-300 hover:scale-105">
+          <div>  <p className="font-inter text-xs text-gray-400 text-center md:text-left transition-all duration-300 hover:text-gray-300 hover:scale-105">
             © {currentYear} KM Enterprises. All rights reserved.
-          </p>
-          <p className="font-inter text-base text-gray-400 text-center md:text-right transition-all duration-300 hover:text-gray-300">
+          </p></div>
+          <div className="flex gap-10">
+            <div><a href="/terms" className="text-base text-gray-400">Terms & Conditions</a></div>
+            <div><a href="/privacy" className="text-base text-gray-400">Privacy Policy</a></div>
+          </div>
+          <div> <p className="font-inter text-base text-gray-400 text-center md:text-right transition-all duration-300 hover:text-gray-300">
             Developed by{" "}
             <a
               href="https://orangemegasoftware.com"
@@ -240,7 +244,7 @@ const Footer = () => {
               <span className="relative z-10">OrangeMegaSoftware</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-yellow transition-all duration-300 group-hover:w-full"></span>
             </a>
-          </p>
+          </p></div>
 
         </div>
       </div>

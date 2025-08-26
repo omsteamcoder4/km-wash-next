@@ -61,17 +61,17 @@ const Carousel = () => {
   }, [slides.length])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-dark via-deep-teal to-primary-blue overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-800 via-blue-500 to-blue-700 overflow-hidden">
       {/* Background Image */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
           backgroundImage: "url(/herobg.png)",
         }}
-      ></div>
+      ></div> */}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-deep-teal/60"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-deep-teal/60"></div> */}
 
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl animate-pulse"></div>
