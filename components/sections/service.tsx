@@ -22,7 +22,7 @@ const ServiceSection = () => {
                             description: "Expert repair service for front load washing machines of all brands",
                             icon: "🔧",
                             image:
-                                "/front.png",
+                                "/WMS.jpg",
                         },
                         {
                             title: "Top Load Washing Machine",
@@ -50,14 +50,14 @@ const ServiceSection = () => {
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/acs.png",
+                                "/ac-repair.jpg",
                         },
                         {
                             title: "Microwave oven",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/owens.png",
+                                "/microvawe.jpg",
                         },
                         {
                             title: "Fully Automatic Service",
@@ -99,7 +99,7 @@ const ServiceSection = () => {
                                     alt={service.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 to-transparent"></div>
+                                {/* <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 to-transparent"></div> */}
                                 <div className="absolute top-4 left-4 w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                                     {service.icon}
                                 </div>
@@ -110,15 +110,15 @@ const ServiceSection = () => {
                                 </h3>
                                 <p className="font-inter text-sm text-white/80 leading-relaxed mb-4">{service.description}</p>
                                 <div className="flex items-center text-primary-blue group-hover:text-accent-yellow transition-colors duration-300">
-                                    <span className="font-inter font-medium text-sm">Learn More</span>
-                                    <svg
+                                    {/* <span className="font-inter font-medium text-sm">Learn More</span> */}
+                                    {/* <svg
                                         className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
                                         fill="none"
                                         stroke="currentColor"
                                         viewBox="0 0 24 24"
                                     >
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
+                                    </svg> */}
                                 </div>
                             </div>
                         </div>

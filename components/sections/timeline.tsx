@@ -133,21 +133,21 @@ const Timeline = () => {
           >
             {[
               {
-                year: "2004",
+                year: "2019",
                 title: "Founded KM Enterprises",
                 description: "Started with a vision to provide reliable washing machine repair service in Pondicherry",
                 icon: "🏢",
                 side: "left",
               },
               {
-                year: "2010",
+                year: "2021",
                 title: "10K+ Repairs Completed",
                 description: "Achieved milestone of serving over 10,000 satisfied customers across Pondicherry",
                 icon: "🔧",
                 side: "right",
               },
               {
-                year: "2015",
+                year: "2022",
                 title: "Brand-Trained Technicians",
                 description: "Our team became certified technicians for all major washing machine brands",
                 icon: "👨‍🔧",

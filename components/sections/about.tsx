@@ -9,7 +9,7 @@ const AboutSection = () => {
                     {/* Left Image */}
                     <div className="relative">
                         <img
-                            src="/service.png"
+                            src="/PICS.jpg"
                             alt="Professional technician repairing washing machine"
                             className="w-full h-auto rounded-2xl shadow-lg"
                         />

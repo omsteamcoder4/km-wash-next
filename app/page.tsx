@@ -9,6 +9,7 @@ import Timeline from "@/components/sections/timeline";
 import Disclaimer from "@/components/sections/disclaimer";
 import AboutSection from "@/components/sections/about";
 import ServiceSection from "@/components/sections/service";
+import Form from "@/components/sections/form";
 
 
 export default function HomePage() {
@@ -30,16 +31,16 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <Disclaimer />
 
+      <Form />
       {/* Hero Section */}
       <Carousel />
-      
+
       {/* About Section */}
       <AboutSection />
 
       {/* Services Section */}
-     <ServiceSection />
+      <ServiceSection />
 
       {/* Service Area Section */}
       <section className="py-20 bg-soft-white">
@@ -132,10 +133,11 @@ export default function HomePage() {
       <Testimonials />
       <div className="relative">
 
- 
+
 
 
       </div>
+      <Disclaimer />
       <Footer />
       <FloatingButtons />
     </div>
