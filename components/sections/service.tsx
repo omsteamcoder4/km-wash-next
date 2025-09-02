@@ -32,7 +32,7 @@ const ServiceSection = () => {
                                 "/top.png",
                         },
                         {
-                            title: "Refrigirator",
+                            title: "Refrigerator",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:

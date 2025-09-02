@@ -39,7 +39,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Complete TV including installation, servicing, and repairs for all types of TVs with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "/tv.png",
+      image: "/TV.jpg",
       stats: "3000+ Installations"
     },{
       title: "Microwave Oven",
@@ -206,7 +206,7 @@ const Carousel = () => {
                 <img
                   src={slides[currentSlide].image}
                   alt={`Professional ${slides[currentSlide].title.toLowerCase()} technician`}
-                  className="w-full h-125 rounded-2xl shadow-2xl"
+                  className="w-full h-64 sm:64 lg:h-125 rounded-2xl shadow-2xl"
                 />
                 {/* Floating Badge */}
                 <motion.div

@@ -201,21 +201,21 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Name 1",
+                name: "Prasanth",
                 role: "Senior Technician",
                 experience: "15+ Years",
                 specialization: "Front Load Specialist",
                 image: User,
               },
               {
-                name: "Name 2",
+                name: "Kumaresh",
                 role: "Lead Technician",
                 experience: "12+ Years",
                 specialization: "All Brands Expert",
                 image: User,
               },
               {
-                name: "Name 3",
+                name: "Sasi Kumar",
                 role: "Service Manager",
                 experience: "18+ Years",
                 specialization: "Quality Control",

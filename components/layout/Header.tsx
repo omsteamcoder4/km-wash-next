@@ -154,13 +154,13 @@ const Header = () => {
             >
               Call Now
             </a>
-            <button
+            {/* <button
               onClick={() => handleNavigation("/contact")}
               className={`font-poppins font-semibold text-sm px-6 py-2 bg-primary-blue rounded-lg hover:bg-primary-blue/90 transition-all duration-300 btn-glow cursor-pointer ${isScrolled ? "text-black" : "text-white"
                 }`}
             >
               Book Service
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}

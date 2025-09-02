@@ -147,12 +147,14 @@ export default function Form() {
 
     const [name, setName] = useState("")
     const [contactNumber, setContactNumber] = useState("")
+    const [address, setAddress] = useState("")
+
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
         // Format the message for WhatsApp
-        const message = `Name: ${name}%0AContact Number: ${contactNumber}`
+        const message = `Name: ${name}%0AContact Number: ${contactNumber}%0AAddress: ${address}`
 
         // Open WhatsApp with pre-filled message
         window.open(`https://wa.me/+919566383338?text=${message}`, '_blank')
@@ -166,7 +168,7 @@ export default function Form() {
             requestAnimationFrame(() => {
                 setIsAnimating(true)
             })
-        }, 1000)
+        }, 3000)
 
         return () => {
             clearTimeout(showTimer)
@@ -250,6 +252,21 @@ export default function Form() {
                                     required
                                 />
                             </div>
+                            <div>
+                                <label htmlFor="address" className="block text-sm font-medium text-amber-100 mb-2">
+                                    Address
+                                </label>
+                                <input
+                                    type="text"
+                                    id="address"
+                                    value={address}
+                                    onChange={(e) => setAddress(e.target.value)}
+                                    className="w-full px-4 py-3 bg-blue-700/50 border border-amber-200/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
+                                    placeholder="Enter your address"
+                                    required
+                                />
+                            </div>
+
 
                             <button
                                 type="submit"
