@@ -168,7 +168,7 @@ export default function Form() {
             requestAnimationFrame(() => {
                 setIsAnimating(true)
             })
-        }, 3000)
+        }, 5000)
 
         return () => {
             clearTimeout(showTimer)

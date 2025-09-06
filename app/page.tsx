@@ -94,7 +94,7 @@ export default function HomePage() {
                 ].map((area) => (
                   <span
                     key={area}
-                    className="font-poppins font-medium text-sm px-4 py-2 bg-white border-2 border-primary-blue text-primary-dark rounded-full hover:bg-primary-blue hover:text-white transition-colors duration-300 cursor-pointer"
+                    className="font-poppins font-medium text-sm px-4 py-2 bg-white border-2 border-primary-blue text-primary-dark rounded-full hover:bg-primary-blue hover:text-white transition-colors duration-300 cursor-default"
                   >
                     {area}
                   </span>

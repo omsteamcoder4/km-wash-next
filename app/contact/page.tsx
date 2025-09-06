@@ -12,13 +12,13 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
+    // email: "",
     address: "",
     brand: "",
-    model: "",
+    // model: "",
     issue: "",
-    serviceType: "",
-    preferredTime: "",
+    // serviceType: "",
+    // preferredTime: "",
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -38,15 +38,14 @@ export default function ContactPage() {
 *Customer Details:*
 Name: ${formData.name}
 Phone: ${formData.phone}
-Email: ${formData.email}
+
 Address: ${formData.address}
 
 *Service Details:*
 Brand: ${formData.brand}
-Model: ${formData.model}
+
 Issue: ${formData.issue}
-Service Type: ${formData.serviceType}
-Preferred Time: ${formData.preferredTime}
+
 
 Please contact me to schedule the service. Thank you!`
 
@@ -60,13 +59,13 @@ Please contact me to schedule the service. Thank you!`
     setFormData({
       name: "",
       phone: "",
-      email: "",
+      // email: "",
       address: "",
       brand: "",
-      model: "",
+      // model: "",
       issue: "",
-      serviceType: "",
-      preferredTime: "",
+      // serviceType: "",
+      // preferredTime: "",
     })
   }
 
@@ -127,7 +126,7 @@ Please contact me to schedule the service. Thank you!`
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="email" className="block font-poppins font-medium text-primary-dark mb-2">
                     Email Address
                   </label>
@@ -140,7 +139,7 @@ Please contact me to schedule the service. Thank you!`
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-blue focus:outline-none font-inter transition-colors duration-300"
                     placeholder="Enter your email address"
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="address" className="block font-poppins font-medium text-primary-dark mb-2">
