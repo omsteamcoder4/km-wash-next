@@ -59,7 +59,7 @@ export default function HomePage() {
             {/* Map/Image */}
             <div className="relative">
               <img
-                src={'/maps.png'}
+                src={'/maps.webp'}
                 alt="Pondicherry service areas map"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />

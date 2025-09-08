@@ -91,7 +91,7 @@ const Header = () => {
           >
             {isScrolled ? (
               <Image
-                src="/faicon.png"
+                src="/faicon.webp"
                 alt="KM Enterprises Logo"
                 width={50}
                 height={50}
@@ -99,7 +99,7 @@ const Header = () => {
               />
             ) : (
               <Image
-                src="/faiconwhite.png"
+                src="/faiconwhite.webp"
                 alt="KM Enterprises Logo"
                 width={50}
                 height={50}

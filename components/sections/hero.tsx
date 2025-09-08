@@ -12,7 +12,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Professional washing machine repair service for all major brands. Expert technicians, genuine spare parts, and same-day doorstep service in Pondicherry.",
       usps: ["Doorstep Service", "All Brands", "5⭐ Rated"],
-      image: "/WM.jpg",
+      image: "/WM.webp",
       stats: "2800+ Repairs Done"
     },
     {
@@ -21,7 +21,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Expert refrigerator repair services with same-day solutions. We handle all cooling issues with professional diagnosis and quality parts.",
       usps: ["Gas Refill", "Compressor Repair", "Warranty Included"],
-      image: "/FRIDGE.jpg",
+      image: "/FRIDGE.webp",
       stats: "1800+ Repairs Done"
     },
     {
@@ -30,7 +30,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Complete AC solutions including installation, servicing, and repairs for all types of air conditioners with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "/AC.jpg",
+      image: "/AC.webp",
       stats: "3200+ Installations"
     },
     {
@@ -39,7 +39,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Complete TV including installation, servicing, and repairs for all types of TVs with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "/TV.jpg",
+      image: "/TV.webp",
       stats: "3000+ Installations"
     },{
       title: "Microwave Oven",
@@ -47,7 +47,7 @@ const Carousel = () => {
       location: "in Pondicherry",
       description: "Complete Microwave Oven solutions including installation, servicing, and repairs for all types of Microwave Ovens with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "/owen.png",
+      image: "/owen.webp",
       stats: "3200+ Installations"
     },
   ]
@@ -66,7 +66,7 @@ const Carousel = () => {
       {/* <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: "url(/herobg.png)",
+          backgroundImage: "url(/herobg.webp)",
         }}
       ></div> */}
 

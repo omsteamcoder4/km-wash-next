@@ -29,7 +29,7 @@ export default function AboutPage() {
       <PageHeader
         title="About KM Enterprises"
         subtitle="20+ years of excellence in repair service across Pondicherry"
-        backgroundImage="/user1.png"
+        backgroundImage="/user1.webp"
       />
 
       {/* Company Story Section */}
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <img
-                src="/aboutimg.png"
+                src="/aboutimg.webp"
                 alt="KM Enterprises workshop"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
@@ -94,7 +94,7 @@ export default function AboutPage() {
                   "Our certified technicians are trained by major brands and have extensive experience in repair.",
                 icon: "👨‍🔧",
                 image:
-                  "/technicians.png",
+                  "/technicians.webp",
               },
               {
                 title: "Genuine Spare Parts",
@@ -102,7 +102,7 @@ export default function AboutPage() {
                   "We use only genuine spare parts from dealers to ensure long-lasting repairs and optimal performance.",
                 icon: "⚙️",
                 image:
-                  "/spare.png",
+                  "/spare.webp",
               },
               {
                 title: "Same Day Service",
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   "Most repairs are completed the same day. We understand the importance of your Home Appliances in daily life.",
                 icon: "⚡",
                 image:
-                  "/sameday.png",
+                  "/sameday.webp",
               },
               {
                 title: "Doorstep Service",
@@ -118,7 +118,7 @@ export default function AboutPage() {
                   "Convenient doorstep service across all areas of Pondicherry. No need to transport your heavy appliance.",
                 icon: "🏠",
                 image:
-                  "/doorstep.png",
+                  "/doorstep.webp",
               },
               {
                 title: "Transparent Pricing",
@@ -126,7 +126,7 @@ export default function AboutPage() {
                   "No hidden charges. We provide upfront pricing with detailed breakdown of service charges and parts cost.",
                 icon: "💰",
                 image:
-                  "/charge.png",
+                  "/charge.webp",
               },
               {
                 title: "Service Warranty",
@@ -134,7 +134,7 @@ export default function AboutPage() {
                   "All our repairs come with warranty. We stand behind our work and ensure your complete satisfaction.",
                 icon: "🛡️",
                 image:
-                  "/warranty.png",
+                  "/warranty.webp",
               },
             ].map((feature, index) => (
               <div key={feature.title} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">

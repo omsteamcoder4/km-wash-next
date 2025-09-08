@@ -74,7 +74,7 @@ const Footer = () => {
                 <div className="relative overflow-hidden rounded-lg">
 
                   <Image
-                    src="/faiconwhite.png"
+                    src="/faiconwhite.webp"
                     alt="KM Enterprises Logo"
                     width={40}
                     height={40}

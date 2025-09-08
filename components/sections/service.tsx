@@ -22,70 +22,70 @@ const ServiceSection = () => {
                             description: "Expert repair service for front load washing machines of all brands",
                             icon: "🔧",
                             image:
-                                "/WMS.jpg",
+                                "/WMS.webp",
                         },
                         {
                             title: "Top Load Washing Machine",
                             description: "Professional service for top load washing machines with genuine parts",
                             icon: "⚙️",
                             image:
-                                "/top.png",
+                                "/top.webp",
                         },
                         {
                             title: "Refrigerator",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/fridges.png",
+                                "/fridges.webp",
                         },
                         {
                             title: "TV",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/tvs.png",
+                                "/tvs.webp",
                         },
                         {
                             title: "Air Conditioner",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/ac-repair.jpg",
+                                "/ac-repair.webp",
                         },
                         {
                             title: "Microwave oven",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/microvawe.jpg",
+                                "/microvawe.webp",
                         },
                         {
                             title: "Fully Automatic Service",
                             description: "Complete repair and maintenance for fully automatic washing machines",
                             icon: "🔩",
                             image:
-                                "/service.png",
+                                "/service.webp",
                         },
                         {
                             title: "All Brand Support",
                             description: "IFB, LG, Samsung, Whirlpool, Bosch, Godrej - we service them all",
                             icon: "🏷️",
                             image:
-                                "brand.png",
+                                "brand.webp",
                         },
                         {
                             title: "Emergency Service",
                             description: "24/7 emergency repair service for urgent washing machine issues",
                             icon: "🚨",
                             image:
-                                "/always.png",
+                                "/always.webp",
                         },
                         {
                             title: "Doorstep Service",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/doorstep.png",
+                                "/doorstep.webp",
                         },
 
                     ].map((service, index) => (

@@ -50,21 +50,21 @@ const Testimonials = () => {
             location: "White Town",
             review: "Excellent service! My LG washing machine was not working for weeks. KM Enterprises fixed it the same day with genuine parts. Very professional and affordable service.",
             rating: 5,
-            image: "/u1.png"
+            image: "/u1.webp"
         },
         {
             name: "Rajesh Kumar",
             location: "Bharathi Nagar",
             review: "Quick and reliable service. Fixed my Samsung washing machine in 2 hours. The technician was very knowledgeable and explained everything clearly.",
             rating: 5,
-            image: "/u2.png"
+            image: "/u2.webp"
         },
         {
             name: "Meeran",
             location: "French Quarter",
             review: "Professional technicians with genuine spare parts. They arrived on time and completed the repair quickly. Highly recommended! Will definitely use them again.",
             rating: 5,
-            image: "/u3.png"
+            image: "/u3.webp"
         }
     ]
 
@@ -131,12 +131,8 @@ const Testimonials = () => {
 
                 {/* 3D Stacked Carousel */}
                 <div
-                    className="
-    relative
-    h-[520px] sm:h-[560px]
-    md:h-[620px] lg:h-[680px] xl:h-[720px]
-    select-none
-  "
+      className="h-[360px] sm:h-[420px] md:h-[480px] lg:h-[520px] xl:h-[560px]"
+
                     role="region"
                     aria-roledescription="carousel"
                     aria-label="Customer testimonials"
@@ -421,7 +417,7 @@ const Testimonials = () => {
                             {/* Corner accent */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-accent-yellow/10 rounded-bl-full transition-all duration-300 group-hover:bg-accent-yellow/20"></div>
 
-                            <div className="flex text-accent-yellow mb-4">
+                            <div className="flex text-accent-yellow mb-4 ">
                                 {[...Array(review.rating)].map((_, i) => (
                                     <motion.span
                                         key={i}
@@ -489,21 +485,21 @@ export default Testimonials
 //             location: "Homemaker, White Town",
 //             review: "Excellent service! My LG washing machine was not working for weeks. KM Enterprises fixed it the same day with genuine parts. Very professional and affordable service.",
 //             rating: 5,
-//             image: "/user1.png"
+//             image: "/user1.webp"
 //         },
 //         {
 //             name: "Rajesh Kumar",
 //             location: "Bharathi Nagar",
 //             review: "Quick and reliable service. Fixed my Samsung washing machine in 2 hours. The technician was very knowledgeable and explained everything clearly.",
 //             rating: 5,
-//             image: "/user2.png"
+//             image: "/user2.webp"
 //         },
 //         {
 //             name: "Meera Devi",
 //             location: "French Quarter",
 //             review: "Professional technicians with genuine spare parts. They arrived on time and completed the repair quickly. Highly recommended! Will definitely use them again.",
 //             rating: 5,
-//             image: "/fuser.png"
+//             image: "/fuser.webp"
 //         }
 //     ]
 
