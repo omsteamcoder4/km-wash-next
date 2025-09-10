@@ -1,3 +1,6 @@
+import Image from "next/image";
+import PICS from '@/public/PICS.webp'
+
 const AboutSection = () => {
 
 
@@ -8,8 +11,8 @@ const AboutSection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Image */}
                     <div className="relative">
-                        <img
-                            src="/PICS.webp"
+                        <Image
+                            src={PICS}
                             alt="Professional technician repairing washing machine"
                             className="w-full h-auto rounded-2xl shadow-lg"
                         />

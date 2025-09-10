@@ -5,6 +5,14 @@ import FloatingButtons from "@/components/common/FloatingButtons"
 import PageHeader from "@/components/common/PageHeader"
 import { User } from 'lucide-react'
 import { useState, useEffect } from "react"
+import Image from "next/image";
+import ABOUTIMG from '@/public/aboutimg.webp'
+import TECH from '@/public/technicians.webp'
+import SPARE from '@/public/spare.webp'
+import SAME from '@/public/sameday.webp'
+import DOOR from '@/public/doorstep.webp'
+import CHARGE from '@/public/charge.webp'
+import WARRANTY from '@/public/warranty.webp'
 
 
 
@@ -60,8 +68,8 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img
-                src="/aboutimg.webp"
+              <Image
+                src={ABOUTIMG}
                 alt="KM Enterprises workshop"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
@@ -94,7 +102,7 @@ export default function AboutPage() {
                   "Our certified technicians are trained by major brands and have extensive experience in repair.",
                 icon: "👨‍🔧",
                 image:
-                  "/technicians.webp",
+                  TECH,
               },
               {
                 title: "Genuine Spare Parts",
@@ -102,7 +110,7 @@ export default function AboutPage() {
                   "We use only genuine spare parts from dealers to ensure long-lasting repairs and optimal performance.",
                 icon: "⚙️",
                 image:
-                  "/spare.webp",
+                  SPARE,
               },
               {
                 title: "Same Day Service",
@@ -110,7 +118,7 @@ export default function AboutPage() {
                   "Most repairs are completed the same day. We understand the importance of your Home Appliances in daily life.",
                 icon: "⚡",
                 image:
-                  "/sameday.webp",
+                  SAME,
               },
               {
                 title: "Doorstep Service",
@@ -118,7 +126,7 @@ export default function AboutPage() {
                   "Convenient doorstep service across all areas of Pondicherry. No need to transport your heavy appliance.",
                 icon: "🏠",
                 image:
-                  "/doorstep.webp",
+                  DOOR,
               },
               {
                 title: "Transparent Pricing",
@@ -126,7 +134,7 @@ export default function AboutPage() {
                   "No hidden charges. We provide upfront pricing with detailed breakdown of service charges and parts cost.",
                 icon: "💰",
                 image:
-                  "/charge.webp",
+                  CHARGE,
               },
               {
                 title: "Service Warranty",
@@ -134,12 +142,12 @@ export default function AboutPage() {
                   "All our repairs come with warranty. We stand behind our work and ensure your complete satisfaction.",
                 icon: "🛡️",
                 image:
-                  "/warranty.webp",
+                  WARRANTY,
               },
             ].map((feature, index) => (
               <div key={feature.title} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
                 <div className="relative h-55 overflow-hidden">
-                  <img
+                  <Image
                     src={feature.image || "/placeholder.svg"}
                     alt={feature.title}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"

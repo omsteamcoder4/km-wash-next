@@ -1,15 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Inter } from "next/font/google"
+import {  Inter } from "next/font/google"
 import Script from "next/script"                
 import "./globals.css"
+import { poppins } from "./fonts";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: "swap",
-})
+
 
 const inter = Inter({
   subsets: ["latin"],

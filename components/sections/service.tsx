@@ -1,6 +1,14 @@
-
-
-
+import Image from "next/image";
+import WMS from '@/public/WMS.webp'
+import TOP from '@/public/top.webp'
+import FRIDGE from '@/public/FRIDGE.webp'
+import TVS from '@/public/tvs.webp'
+import ACREPAIR from '@/public/ac-repair.webp'
+import MICRO from '@/public/microvawe.webp'
+import SERVICE from '@/public/service.webp'
+import BRAND from '@/public/brand.webp'
+import DOOR from '@/public/doorstep.webp'
+import ALWAYS from '@/public/always.webp'
 const ServiceSection = () => {
 
 
@@ -22,70 +30,70 @@ const ServiceSection = () => {
                             description: "Expert repair service for front load washing machines of all brands",
                             icon: "🔧",
                             image:
-                                "/WMS.webp",
+                                WMS,
                         },
                         {
                             title: "Top Load Washing Machine",
                             description: "Professional service for top load washing machines with genuine parts",
                             icon: "⚙️",
                             image:
-                                "/top.webp",
+                                TOP,
                         },
                         {
                             title: "Refrigerator",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/fridges.webp",
+                                FRIDGE,
                         },
                         {
                             title: "TV",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/tvs.webp",
+                                TVS,
                         },
                         {
                             title: "Air Conditioner",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/ac-repair.webp",
+                                ACREPAIR,
                         },
                         {
                             title: "Microwave oven",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/microvawe.webp",
+                                MICRO,
                         },
                         {
                             title: "Fully Automatic Service",
                             description: "Complete repair and maintenance for fully automatic washing machines",
                             icon: "🔩",
                             image:
-                                "/service.webp",
+                                SERVICE,
                         },
                         {
                             title: "All Brand Support",
                             description: "IFB, LG, Samsung, Whirlpool, Bosch, Godrej - we service them all",
                             icon: "🏷️",
                             image:
-                                "brand.webp",
+                                BRAND,
                         },
                         {
                             title: "Emergency Service",
                             description: "24/7 emergency repair service for urgent washing machine issues",
                             icon: "🚨",
                             image:
-                                "/always.webp",
+                                ALWAYS,
                         },
                         {
                             title: "Doorstep Service",
                             description: "Convenient doorstep repair service at your home in Pondicherry",
                             icon: "🏠",
                             image:
-                                "/doorstep.webp",
+                                DOOR,
                         },
 
                     ].map((service, index) => (
@@ -94,7 +102,7 @@ const ServiceSection = () => {
                             className="group bg-deep-teal rounded-2xl overflow-hidden shadow-lg hover-lift cursor-pointer"
                         >
                             <div className="relative h-48 overflow-hidden">
-                                <img
+                                <Image
                                     src={service.image || "/placeholder.svg"}
                                     alt={service.title}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

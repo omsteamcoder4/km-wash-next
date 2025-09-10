@@ -1,78 +1,77 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import WM from "@/public/WM.webp"
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const slides = [
     {
       title: "Washing Machine",
       subtitle: "Repair & Service",
       location: "in Pondicherry",
-      description: "Professional washing machine repair service for all major brands. Expert technicians, genuine spare parts, and same-day doorstep service in Pondicherry.",
+      description:
+        "Professional washing machine repair service for all major brands. Expert technicians, genuine spare parts, and same-day doorstep service in Pondicherry.",
       usps: ["Doorstep Service", "All Brands", "5⭐ Rated"],
-      image: "/WM.webp",
-      stats: "2800+ Repairs Done"
+      image: WM,
+      stats: "2800+ Repairs Done",
     },
     {
       title: "Refrigerator",
       subtitle: "Repair & Maintenance",
       location: "in Pondicherry",
-      description: "Expert refrigerator repair services with same-day solutions. We handle all cooling issues with professional diagnosis and quality parts.",
+      description:
+        "Expert refrigerator repair services with same-day solutions. We handle all cooling issues with professional diagnosis and quality parts.",
       usps: ["Gas Refill", "Compressor Repair", "Warranty Included"],
       image: "/FRIDGE.webp",
-      stats: "1800+ Repairs Done"
+      stats: "1800+ Repairs Done",
     },
     {
       title: "Air Conditioner",
       subtitle: "Installation & Service",
       location: "in Pondicherry",
-      description: "Complete AC solutions including installation, servicing, and repairs for all types of air conditioners with guaranteed satisfaction.",
+      description:
+        "Complete AC solutions including installation, servicing, and repairs for all types of air conditioners with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
       image: "/AC.webp",
-      stats: "3200+ Installations"
+      stats: "3200+ Installations",
     },
     {
       title: "Televisions TV",
       subtitle: "Installation & Service",
       location: "in Pondicherry",
-      description: "Complete TV including installation, servicing, and repairs for all types of TVs with guaranteed satisfaction.",
+      description:
+        "Complete TV including installation, servicing, and repairs for all types of TVs with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
       image: "/TV.webp",
-      stats: "3000+ Installations"
-    },{
+      stats: "3000+ Installations",
+    },
+    {
       title: "Microwave Oven",
       subtitle: "Installation & Service",
       location: "in Pondicherry",
-      description: "Complete Microwave Oven solutions including installation, servicing, and repairs for all types of Microwave Ovens with guaranteed satisfaction.",
+      description:
+        "Complete Microwave Oven solutions including installation, servicing, and repairs for all types of Microwave Ovens with guaranteed satisfaction.",
       usps: ["Free Installation", "Annual Maintenance", "24/7 Support"],
-      image: "/owen.webp",
-      stats: "3200+ Installations"
+      image: "/owen.webp", // make sure filename exists; if it's "oven.webp", fix here
+      stats: "3200+ Installations",
     },
-  ]
+  ];
 
   // Auto-rotate slides every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [slides.length])
+    const interval = setInterval(
+      () => setCurrentSlide((prev) => (prev + 1) % slides.length),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-800 via-blue-500 to-blue-700 overflow-hidden">
-      {/* Background Image */}
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{
-          backgroundImage: "url(/herobg.webp)",
-        }}
-      ></div> */}
-
-      {/* Overlay */}
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-deep-teal/60"></div> */}
-
       {/* Decorative elements */}
       <div className="absolute top-20 right-20 w-64 h-64 bg-primary-blue/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-48 h-48 bg-accent-yellow/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
@@ -80,7 +79,7 @@ const Carousel = () => {
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={`left-${currentSlide}`}
               initial={{ opacity: 0, x: -100 }}
@@ -90,7 +89,7 @@ const Carousel = () => {
               className="text-white space-y-8"
             >
               {/* Eyebrow */}
-              <div className="inline-flex items-center space-x-2 bg-accent-yellow/20 backdrop-blur-sm px-4 py-2 rounded-full animate-in fade-in-0 slide-in-from-left-4 duration-700 mt-5">
+              <div className="inline-flex items-center space-x-2 bg-accent-yellow/20 backdrop-blur-sm px-4 py-2 rounded-full mt-5">
                 <span className="w-2 h-2 bg-accent-yellow rounded-full animate-pulse"></span>
                 <span className="font-poppins font-semibold text-sm uppercase tracking-wider text-accent-yellow">
                   Pondicherry • Same-Day Service
@@ -100,9 +99,14 @@ const Carousel = () => {
               {/* Main Heading */}
               <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
                 {slides[currentSlide].title}
-                <span className="text-primary-blue"> {slides[currentSlide].subtitle}</span>
+                <span className="text-primary-blue">
+                  {" "}
+                  {slides[currentSlide].subtitle}
+                </span>
                 <br />
-                <span className="text-accent-yellow">{slides[currentSlide].location}</span>
+                <span className="text-accent-yellow">
+                  {slides[currentSlide].location}
+                </span>
               </h1>
 
               {/* USPs */}
@@ -115,7 +119,11 @@ const Carousel = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg"
                   >
-                    <svg className="w-5 h-5 text-accent-yellow" fill="currentColor" viewBox="0 0 20 20">
+                    <svg
+                      className="w-5 h-5 text-accent-yellow"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -128,7 +136,7 @@ const Carousel = () => {
               </div>
 
               {/* Description */}
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -168,7 +176,7 @@ const Carousel = () => {
               </div>
 
               {/* Trust Indicators */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
@@ -182,7 +190,9 @@ const Carousel = () => {
                       </svg>
                     ))}
                   </div>
-                  <span className="font-inter text-sm text-white/80">2800+ Happy Customers</span>
+                  <span className="font-inter text-sm text-white/80">
+                    2800+ Happy Customers
+                  </span>
                 </div>
                 <div className="h-6 w-px bg-white/30"></div>
                 <div className="font-poppins font-semibold text-sm bg-accent-yellow text-primary-dark px-3 py-1 rounded-full">
@@ -193,7 +203,7 @@ const Carousel = () => {
           </AnimatePresence>
 
           {/* Right Content - Image */}
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={`right-${currentSlide}`}
               initial={{ opacity: 0, x: 100 }}
@@ -202,56 +212,67 @@ const Carousel = () => {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <div className="relative">
-                <img
+              {/* Responsive container establishes size */}
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[4/3] lg:aspect-[5/4]">
+                <Image
                   src={slides[currentSlide].image}
                   alt={`Professional ${slides[currentSlide].title.toLowerCase()} technician`}
-                  className="w-full h-64 sm:64 lg:h-125 rounded-2xl shadow-2xl"
+                  fill
+                  className="object-cover"
+                  // On first paint, help LCP by prioritizing the first slide:
+                  priority={currentSlide === 0}
+                  fetchPriority={currentSlide === 0 ? "high" : "auto"}
+                  // On mobile it's full width; on lg it's half (2-column grid)
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                {/* Floating Badge */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="absolute -top-4 -right-4 bg-accent-yellow text-primary-dark font-poppins font-bold text-sm px-4 py-2 rounded-full shadow-lg float-animation"
-                >
-                  Same Day Service
-                </motion.div>
-                {/* Stats Badge */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg"
-                >
-                  <div className="text-center">
-                    <div className="font-poppins font-bold text-2xl text-primary-dark">
-                      {slides[currentSlide].stats.split('+')[0]}+
-                    </div>
-                    <div className="font-inter text-sm text-steel-gray">
-                      {slides[currentSlide].stats.split('+')[1]}
-                    </div>
-                  </div>
-                </motion.div>
               </div>
+
+              {/* Floating Badge */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="absolute -top-4 -right-4 bg-accent-yellow text-primary-dark font-poppins font-bold text-sm px-4 py-2 rounded-full shadow-lg float-animation"
+              >
+                Same Day Service
+              </motion.div>
+
+              {/* Stats Badge */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg"
+              >
+                <div className="text-center">
+                  <div className="font-poppins font-bold text-2xl text-primary-dark">
+                    {slides[currentSlide].stats.split("+")[0]}+
+                  </div>
+                  <div className="font-inter text-sm text-steel-gray">
+                    {slides[currentSlide].stats.split("+")[1]}
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Carousel Controls */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-accent-yellow w-6' : 'bg-white/50'}`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "bg-accent-yellow w-6" : "bg-white/50"
+              }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

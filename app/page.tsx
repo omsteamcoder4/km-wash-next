@@ -10,6 +10,13 @@ import Disclaimer from "@/components/sections/disclaimer";
 import AboutSection from "@/components/sections/about";
 import ServiceSection from "@/components/sections/service";
 import Form from "@/components/sections/form";
+import Image from "next/image";
+import MAPS from '@/public/maps.webp'
+<Image
+  src={MAPS}
+  alt="Pondicherry service areas map"
+  className="w-full h-auto rounded-2xl shadow-lg"
+/>
 
 
 export default function HomePage() {
@@ -58,8 +65,8 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Map/Image */}
             <div className="relative">
-              <img
-                src={'/maps.webp'}
+              <Image
+                src={MAPS}
                 alt="Pondicherry service areas map"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
